@@ -70,3 +70,79 @@ Think of it like:
 
 If you want, I can show you **how leap years affect your `days_in_month[]` array** — specifically how to automatically make February = 29 days only when it’s a leap year.
 Do you want that example?
+
+=	=	=	=	=	=	=	=	==	=	=	=	==	=	=		=	=	=	=	=	=	==	=	=	==	=	
+كلمة **leap year** بالإنجليزية معناها **سنة كبيسة** بالعربية.
+
+🗓️ **السنة الكبيسة** هي السنة التي يكون فيها شهر فبراير **29 يومًا** بدلًا من 28 يومًا.
+وتأتي مرة كل **أربع سنوات** تقريبًا.
+	=	=	==	=		==		=	=	==	=		==		=	=		=	=	==	=		==	==		=	
+
+
+Great question 👏
+
+The **benefit of calculating a leap year** is to make sure the **calendar stays accurate** with the **real time of the Earth’s movement around the Sun** 🌍☀️
+
+Let’s explain simply 👇
+
+---
+
+### 🧠 What is happening:
+
+* The Earth takes about **365.25 days** to orbit the Sun — **not exactly 365**.
+* That extra **0.25 day = 6 hours** builds up.
+* After **4 years**, those extra 6 hours × 4 = **24 hours = 1 full day**.
+* So, we **add 1 extra day (Feb 29)** every 4 years.
+  → That year is called a **leap year**.
+
+---
+
+### 📅 Why your program needs to calculate leap years:
+
+If you are building a **calendar program**, you need to know:
+
+* February has **28 days** normally.
+* But in leap years, February has **29 days**.
+
+So, the line:
+
+```c
+days_in_month[2] = 29;
+```
+
+is only correct **if** the year is a leap year.
+That’s why your code checks for leap years — to show the **right number of days** in the calendar.
+
+---
+
+### ✅ Example:
+
+| Year | Leap Year? | Days in February |
+| ---- | ---------- | ---------------- |
+| 2023 | ❌ No       | 28               |
+| 2024 | ✅ Yes      | 29               |
+| 2025 | ❌ No       | 28               |
+
+---
+
+Would you like me to show you the **C function** that checks if a year is leap year or not?
+
+	======	==	=	=	=	=	=	==	=	=	==	=	=	=		==	=	=	===	=	=	=	==	=	=	=	
+	✅ Exactly! Yes — **2028 will be a leap year.**
+
+Here’s why 👇
+
+A year is a **leap year** if:
+
+```c
+(year % 4 == 0 && year % 100 != 0) || (year % 400 == 0)
+```
+
+Now check step by step for **2028**:
+
+1. `2028 % 4 == 0` → ✅ true
+2. `2028 % 100 != 0` → ✅ true
+3. So the first condition `(year % 4 == 0 && year % 100 != 0)` is true → ✅
+4. That means 2028 **is a leap year.**
+
+🗓️ February 2028 will have **29 days**.
