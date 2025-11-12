@@ -146,3 +146,81 @@ Now check step by step for **2028**:
 4. That means 2028 **is a leap year.**
 
 🗓️ February 2028 will have **29 days**.
+
+
+		=	=	=	=		=	=		=	=	=	=	=	=	
+
+		Absolutely! Let’s make it **very clear**. 😄
+
+In programming (like in your calendar program), we often **assign numbers to weekdays** so the computer can understand them. This is usually called the **day code**.
+
+---
+
+### 📅 Standard Day Codes
+
+| Day of Week | Number (day code) |
+| ----------- | ----------------- |
+| Sunday      | 0                 |
+| Monday      | 1                 |
+| Tuesday     | 2                 |
+| Wednesday   | 3                 |
+| Thursday    | 4                 |
+| Friday      | 5                 |
+| Saturday    | 6                 |
+
+---
+
+### ✅ How it works in code
+
+```c
+int dayCode = 3;  // Example
+```
+
+* `dayCode = 3` → Wednesday
+* `dayCode = 0` → Sunday
+* `dayCode = 6` → Saturday
+
+---
+
+### 💻 Example: printing day names from code
+
+```c
+#include <stdio.h>
+
+int main() {
+    char *days[] = {"Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"};
+    
+    for (int i = 0; i < 7; i++) {
+        printf("Day code %d = %s\n", i, days[i]);
+    }
+
+    return 0;
+}
+```
+
+**Output:**
+
+```
+Day code 0 = Sunday
+Day code 1 = Monday
+Day code 2 = Tuesday
+Day code 3 = Wednesday
+Day code 4 = Thursday
+Day code 5 = Friday
+Day code 6 = Saturday
+```
+
+---
+
+💡 **Summary**:
+
+* Computers don’t use “Sunday” or “Monday” directly.
+* They use **numbers 0–6** (day code).
+* Later you can **map the number to the day name** using an array like above.
+
+---
+
+If you want, I can show you **how to use this in your full calendar program** so it prints **Sun, Mon, Tue…** automatically for every month.
+
+Do you want me to do that?
+
